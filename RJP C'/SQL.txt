@@ -1,0 +1,24 @@
+conn sys/orcl as sysdba;		//管理者権限を入手
+
+create user cprimeuser identified by cprime account unlock;	//ユーザー作成
+grant dba to cprimeuser;		//ユーザにDBA権限を与える場合に指定します。
+
+
+CREATE TABLE board_thread(
+    th_id NUMBER(6) PRIMARY KEY,
+    th_title VARCHAR2(100) NOT NULL,
+    th_name VARCHAR2(20) NOT NULL,
+    th_date date,
+    th_description VARCHAR2(200)
+);
+
+    CREATE TABLE board_res(
+        th_id NUMBER(6) NOT NULL,
+        res_id NUMBER(8) PRIMARY KEY,
+        res_name VARCHAR2(20) NOT NULL,
+        res_date date DEFAULT sysdate,
+        res_text VARCHAR2(500) NOT NULL,
+        res_likes NUMBER(4),
+        res_count NUMBER(4),
+        FOREIGN KEY(th_id) REFERENCES board_thread(th_id)
+    );
