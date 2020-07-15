@@ -1,7 +1,7 @@
-conn sys/orcl as sysdba;		//ŠÇ—ÒŒ ŒÀ‚ğ“üè
+conn sys/orcl as sysdba;		//ï¿½Ç—ï¿½ï¿½ÒŒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-create user cprimeuser identified by cprime account unlock;	//ƒ†[ƒU[ì¬
-grant dba to cprimeuser;		//ƒ†[ƒU‚ÉDBAŒ ŒÀ‚ğ—^‚¦‚éê‡‚Éw’è‚µ‚Ü‚·B
+create user cprimeuser identified by cprime account unlock;	//ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½ì¬
+grant dba to cprimeuser;		//ï¿½ï¿½ï¿½[ï¿½Uï¿½ï¿½DBAï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½ï¿½ê‡ï¿½Éwï¿½è‚µï¿½Ü‚ï¿½ï¿½B
 
 
 CREATE TABLE board_thread(
@@ -11,6 +11,8 @@ CREATE TABLE board_thread(
     th_date date,
     th_description VARCHAR2(200)
 );
+
+//ã¦ã™ã¨
 
     CREATE TABLE board_res(
         th_id NUMBER(6) NOT NULL,
