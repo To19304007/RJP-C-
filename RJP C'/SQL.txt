@@ -13,6 +13,7 @@ CREATE TABLE board_thread(
 );
 
 //てすと
+//テスト２
 
     CREATE TABLE board_res(
         th_id NUMBER(6) NOT NULL,
